@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Việt Nam 1979 trong ảnh của Thomas Billhardt</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var iScrollPos = 0;
+            var dh = $(window).height();
+
+            $(window).scroll(function() {
+                var iCurScrollPos = $(this).scrollTop();
+
+                // if($('.vne-top').offset().top - iCurScrollPos <= 0) {
+                //     $(this).children('.vnet-change').addClass('fixed');
+                // } else {
+                //     $(this).children('.vnet-change').removeClass('fixed');
+                // }
+
+                $('.vn-effect').each(function() {
+                    console.log($(this).find('.vne-top').offset().top - iCurScrollPos <= 0);
+                    if($(this).find('.vne-top').offset().top - iCurScrollPos <= 0) {
+                        $(this).find('.vnet-change').addClass('fixed');
+                    } else {
+                        $(this).find('.vnet-change').removeClass('fixed');
+                    }
+                });
+
+                $('.vn-effect-2').each(function() {
+                    console.log($(this).find('.vne-top').offset().top - iCurScrollPos <= 0);
+                    if($(this).find('.vne-top').offset().top - iCurScrollPos <= 0) {
+                        $(this).find('.vnet-change').addClass('fixed');
+                    } else {
+                        $(this).find('.vnet-change').removeClass('fixed');
+                    }
+                });
+
+                $('.vne-caption').each(function() {
+                    if($(this).offset().top <= iCurScrollPos) {
+                        var image = $(this).attr('data-image');
+                        $(this).parent().find('.vnet-change').css('opacity', '0');
+                        $(this).parent().find('.vnet-change[data-image="' + image + '"]').css('opacity', '1');
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="vn-wrapper">
+        <div class="vn-cover">
+            <video src="images/cover.mp4" autoplay loop></video>
+        </div>
+
+        <div class="vn-body">
+            <div class="vn-content w660">
+                <p>Là một nhiếp ảnh gia nổi tiếng người Đức, Thomas Billhardt được biết tới với những bức ảnh chân thực và giàu cảm xúc nhưng vẫn đậm chất thời sự tại nhiều điểm nóng của thế giới, trong đó có Việt Nam giai đoạn chiến tranh. Ảnh của ông được đăng tải trên nhiều tờ báo lớn và được triển lãm khắp thế giới. </p>
+
+                <p>Nhân kỷ niệm 40 năm chiến tranh bảo vệ biên giới phía Bắc (1979 - 2019), Trí thức trẻ đã có cuộc trao đổi với Thomas Billhardt và được ông chia sẻ về hành trình tác nghiệp tại Lạng Sơn, một trong những khu vực cuộc chiến diễn ra ác liệt nhất vào năm 1979.</p>
+            </div>
+
+            <div class="vn-content w980">
+                <img src="images/img-1.jpg" alt="" class="vn-img">
+
+                <div class="w660">
+                    <p>Trong khoảng thời gian từ năm 1967 tới năm 1975, tôi đã tới Việt Nam 7 lần với tư cách là một phóng viên chiến trường. Tôi là một trong những nhiếp ảnh gia đầu tiên tới thành phố Đà Nẵng sau giải phóng vào tháng 5/1975 và từ Hà Nội đi Sài Gòn trong tháng 9 năm đó.</p>
+
+                    <p>Năm 1979, khi hay tin về cuộc chiến tranh giữa Việt Nam và Trung Quốc, Đoàn thanh thiếu niên tự do Đức (FDJ) ở CHDC Đức (Đông Đức cũ), đã lập tức cử tôi sang Việt Nam. Tôi là phóng viên duy nhất của CHDC Đức đưa tin về cuộc chiến này ở khu vực Lạng Sơn.</p>
+                </div>
+            </div>
+
+            <div class="vn-full-img">
+                <img src="images/quote-1.jpg" alt="" class="vn-img" style="margin-bottom: 0;">
+            </div>
+
+            <div class="vn-effect">
+                <div class="vne-top">
+                    <div class="vnet-change not-full" data-image="img-3">
+                        <img src="images/img-3_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-3_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+
+                    <div class="vnet-change" data-image="img-2" style="opacity: 1">
+                        <img src="images/img-2_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-2_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+                </div>
+
+                <div class="vne-caption first" data-image="img-2">
+                    <div class="vnec-text">
+                        <span>Một chiếc xe Jeep đưa tôi đến biên giới Việt Nam với Trung Quốc. Trên đường tới đó, tôi gặp lớp lớp những đoàn lính đang hành quân tới Lạng Sơn. Lúc đó Việt Nam vừa giành lại được khu vực này. <br /> <br /> Trung Quốc đã rút đi nhưng trên đường chôn rất nhiều mìn. Tôi chỉ được phép đi phía sau những người lính Việt Nam trên những con đường đã được rà phá.</span>
+                    </div>
+                </div>
+
+                <div class="vne-caption right" data-image="img-3">
+                    <div class="vnec-text">
+                        <span>Những quả mìn được tháo gỡ nằm đầy bên vệ đường. Không gian đặc quánh mùi tử khí, bởi người ta chưa thể dọn sạch được thi thể người và xác động vật bị giết bởi bom mìn.</span>
+                    </div>
+                </div>
+
+                <div class="vne-caption" style="height: 50vh"></div>
+            </div>
+
+            <div class="vn-content w980">
+                <div class="w660">
+                    <p>Tôi ngủ nghỉ trong những ngôi nhà đổ nát cùng với những người lính và cũng nhận được thức ăn từ họ. Những người lính rất quan tâm lo lắng để không có chuyện gì xảy ra với tôi. Lúc nào cũng có tiếng súng nổ rền vang. Thật tiếc, tôi đã không được phép ra tiền tuyến.</p>
+
+                    <p>Tôi đã tự tìm cách thuyết phục người phiên dịch và nhân viên an ninh về phong cách nhiếp ảnh mang tính nhân văn của mình. Những bức ảnh của tôi là để lên án chiến tranh và kêu gọi thế giới thể hiện tình đoàn kết hữu nghị với các nạn nhân của cuộc chiến.</p>
+
+                    <p>Tôi đã nói với bạn mình rằng các bức ảnh chân thực về cuộc chiến phi nghĩa của Mỹ thuyết phục hơn là những bức ảnh mang tính tuyên truyền. Các bức ảnh của tôi thể hiện sự kính trọng và tình yêu của tôi dành cho những con người Việt Nam chiến đấu vì nền độc lập. Tôi không muốn chụp những bức ảnh độc lạ về những con người ở một miền đất xa xôi, mà muốn mang mọi dân tộc, chủng tộc đến gần nhau hơn. Chúng ta là những người anh em, chị em có chung những cảm xúc. Cuộc sống, cái chết, tình yêu và nỗi đau luôn song hành dù là ở châu Á, châu  u, Mỹ hay châu Phi.</p>
+
+                    <p>Tôi luôn chụp ảnh màu. Vì chỉ có nguồn phim của CHDC Đức mà nguồn phim đó lại không được tốt lắm, nên để cho ra những tấm ảnh với chất lượng có thể chấp nhận được, tôi chỉ có thể sử dụng phim cuộn. Thế nên, tôi chọn ảnh khổ vuông. Dĩ nhiên là ảnh khổ nhỏ (135mm) tốt hơn cho ảnh thời sự nhưng nếu sử dụng khổ nhỏ, tôi chắc chắn sẽ không có kết quả ưng ý.</p>
+                </div>
+
+                <img src="images/img-4.jpg" alt="" class="vn-img">
+            </div>
+
+            <div class="vn-effect-2">
+                <div class="vne-top">
+                    <div class="vnet-change" data-image="img-9">
+                        <img src="images/img-9_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-9_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+
+                    <div class="vnet-change not-full right" data-image="img-8">
+                        <img src="images/img-8_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-8_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+
+                    <div class="vnet-change" data-image="img-7">
+                        <img src="images/img-7_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-7_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+
+                    <div class="vnet-change not-full" data-image="img-6">
+                        <img src="images/img-6_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-6_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+
+                    <div class="vnet-change" data-image="img-5" style="opacity: 1; height: 100vh">
+                        <img src="images/img-5_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-5_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+                </div>
+
+                <div class="vne-caption first right" data-image="img-5">
+                    <div class="vnec-text">
+                        <span>Trên đường đi tôi gặp rất nhiều người dân tản cư. Có thể thấy rõ sự tàn phá của chiến tranh ở khu vực biên giới.</span>
+                    </div>
+                </div>
+
+                <div class="vne-caption" data-image="img-6" style="width: 50%">
+                    <div class="vnec-text">
+                        <span>Tôi qua sông bằng cầu phao và thấy người dân sơ tán bằng thuyền.</span>
+                    </div>
+                </div>
+
+                <div class="vne-caption right" data-image="img-7">
+                    <div class="vnec-text">
+                        <span>Tôi vẫn còn nhớ bức ảnh về những người lính Việt Nam ở Lạng Sơn. Thật ra, ban đầu tôi đã muốn chụp một bức ảnh rất khác. Chiến tranh không phải trò đùa. Những người lính trẻ dễ mến ấy có thể sẽ phải hy sinh vào ngày mai. <br /> <br /> Tôi muốn bức ảnh phải lột tả được sự nghiêm túc và chủ nghĩa anh hùng. Tôi leo lên một chiếc bàn và muốn hướng những người lính nhìn vào ống kính, để chụp một bức ảnh tập thể nhưng vẫn thể hiện được từng cá thể. Ngay lúc đó, một nhà báo Liên Xô (cũ) cũng nhảy lên bàn cùng tôi, rồi đề nghị những người lính hãy giơ cao khẩu súng AK của họ lên và hô vang. Bức ảnh sau đó đã được chọn làm bìa cho cuốn sách ảnh về Việt Nam 1979.</span>
+                    </div>
+                </div>
+
+                <div class="vne-caption right" data-image="img-8">
+                    <div class="vnec-text">
+                        <span>Tôi đã có cơ hội chụp được những bức ảnh tù binh Trung Quốc khi bắt gặp một chiếc xe cứu thương trên đường. Những tù binh ấy bị thương. Họ mặc những bộ quần áo giống hệt như phi công Mỹ từng bị bắt ở Hà Nội.</span>
+                    </div>
+                </div>
+
+                <div class="vne-caption right" data-image="img-9">
+                    <div class="vnec-text">
+                        <span>Tôi cảm thấy tù binh Trung Quốc không được giáo dục tốt và phần nào bị hạn chế bởi hệ tư tưởng của Mao Trạch Đông. <br /> <br /> Vì thế, cách họ tác chiến, cũng như phương tiện kỹ thuật nguyên sơ và tàn ác.</span>
+                    </div>
+                </div>
+
+                <div class="vne-caption" style="height: 50vh"></div>
+            </div>
+
+            <div class="vn-content w980">
+                <div class="w660">
+                    <p>Tình hữu nghị với Việt Nam là mục tiêu đầu tiên của tôi khi tìm cách thuyết phục dư luận quốc tế rằng chiến thắng trước sự xâm lược của Mỹ là điều cần thiết với Việt Nam. Dĩ nhiên tôi cũng biết rõ là đối với Việt Nam, một cuộc chiến tranh nữa với một đất nước lớn hơn rất nhiều có thể là đòn chí tử. Mỹ đã rất vui mừng về chuyện đó.</p>
+
+                    <img src="images/img-10.jpg" alt="" class="vn-img">
+
+                    <p>Trong giai đoạn đó, người dân đang ăn mừng chiến thắng chống Mỹ ở Hà Nội. Người dân Việt Nam xứng đáng được vui mừng vì điều đó. Bức ảnh những quân nhân với gương mặt cười ở Hà Nội và bức ảnh người lính cài hoa trên súng khi hành quân ở Lạng Sơn những bức ảnh tôi thích nhất trong số những ảnh tôi đã chụp tại Việt Nam năm 1979.</p>
+                </div>
+            </div>
+
+            <div class="vn-effect">
+                <div class="vne-top">
+                    <div class="vnet-change" data-image="img-12">
+                        <img src="images/img-12_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-12_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+
+                    <div class="vnet-change" data-image="img-11" style="opacity: 1">
+                        <img src="images/img-11_16x9.jpg" alt="" class="vn-img_16x9">
+                        <img src="images/img-11_5x4.jpg" alt="" class="vn-img_5x4">
+                    </div>
+                </div>
+
+                <div class="vne-caption first" data-image="img-11"></div>
+
+                <div class="vne-caption right" data-image="img-12"></div>
+
+                <div class="vne-caption" style="height: 50vh"></div>
+            </div>
+
+            <div class="vn-full-img">
+                <img src="images/quote-1.jpg" alt="" class="vn-img" style="margin-bottom: 0;">
+            </div>
+
+            <div class="vn-credit">
+                <p><span class="bold">TRÍ THỨC TRẺ</span> | 18.02.2019</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/**
+ * Font Family
+ */
+@font-face {
+    font-family: 'NotoSerif';
+    src: url('../fonts/NotoSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'NotoSerif';
+    src: url('../fonts/NotoSerif-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'NotoSerif';
+    src: url('../fonts/NotoSerif-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'NotoSerif';
+    src: url('../fonts/NotoSerif-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Courier';
+    src: url('../fonts/cour.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Courier';
+    src: url('../fonts/courbd.ttf') format('truetype');
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.vn-cover video {
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: 50px;
+}
+.w980 {
+    width: 980px;
+    margin: 0 auto;
+}
+.w660 {
+    width: 660px;
+    margin: 0 auto;
+}
+.vn-content {
+    font-family: 'NotoSerif', sans-serif;
+    font-size: 17px;
+    line-height: 27px;
+}
+.vn-content p {
+    margin-bottom: 30px;
+}
+.vn-img {
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: 30px;
+}
+.vne-top {
+    height: 100vh;
+    position: relative;
+}
+.vnet-change {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.vnet-change.fixed {
+    position: fixed;
+}
+.vn-img_16x9 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vn-img_5x4 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*.vnet-change.not-full .vn-img_16x9 {*/
+    /*width: 75%;*/
+    /*height: 100%;*/
+/*}*/
+/*.vnet-change.not-full.right .vn-img_16x9 {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+/*}*/
+.vne-caption,
+.vne-caption-2 {
+    height: 150vh;
+    position: relative;
+}
+.vne-caption.first,
+.vne-caption-2.first {
+    height: 50vh;
+}
+.vnec-text {
+    width: 40%;
+    font-family: 'Courier', monospace;
+    font-size: 1.1vw;
+    line-height: 1.3vw;
+    font-weight: 700;
+    position: absolute;
+    left: 3.125%;
+    bottom: 7.5%;
+}
+.vnec-text span {
+    /*display: inline;*/
+    background-color: #000;
+    color: #fff;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 20px
+}
+.vne-caption.right .vnec-text {
+    left: unset;
+    right: 3.125%;
+}
+.vn-full-img {
+    height: 100vh;
+}
+.vn-full-img .vn-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vn-credit {
+    color: #6c6b6b;
+    font-family: 'Courier', monospace;
+    font-size: 1.1vw;
+    padding: 0 2.2vw;
+    line-height: 2.2vw;
+    margin-top: -2.2vw;
+    text-align: right;
+}
+.vn-credit p {
+    position: relative;
+}
+.vn-credit p:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #6c6b6b;
+}
+.vn-credit .bold {
+    font-weight: 700;
+}
+
+@media (device-aspect-ratio: 5/4) {
+    .vn-img_16x9 {
+        display: none;
+    }
+    .vn-img_5x4 {
+        display: block;
+    }
+}
